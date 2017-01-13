@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html>
+    
+    <head>
+        <meta charset = "utf-8">
+        <title>Firebase Test </title>
+    </head>
+    
+    <body>
+        <progress value="0" max="100" id="uploader"></progress>
+        <input type="file" value="upload" id="fileButton" />
+        
+        
+
+<script src="https://www.gstatic.com/firebasejs/3.6.4/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDw6lU9oVwk18AFejbS4S8U_fbrvcfuB3U",
+    authDomain: "test-878f2.firebaseapp.com",
+    databaseURL: "https://test-878f2.firebaseio.com",
+    storageBucket: "test-878f2.appspot.com",
+    messagingSenderId: "341861794514"
+  };
+  firebase.initializeApp(config);
+</script>
+          <script>  
+            var uploader = document.getElementById('uploader');
+            var fileButton = document.getElementById('fileButton');
+            
+            fileButton.addEventListener('change', function(e) {
+                
+                var file = e.target.files[0];
+                
+                var storageRef = firebase.storage().ref('images/'+file.name);
+                
+                var task = storageRef.put(file);
+                
+                task.on('state_changed', 
+                       
+                    function progress(snapshot) {
+                        var percentage = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+                        uploader.value = percentage;
+                    
+                    },
+                        
+                    function error(err) {
+                    
+                    },
+                    
+                    function complete() {
+                        
+                    }
+                        
+                )
+            });
+            
+            </script>
+    </body>
+</html>
