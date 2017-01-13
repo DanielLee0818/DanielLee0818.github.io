@@ -26,5 +26,6 @@ body {
 }
 
 a {
-    text-decoration-color: white;
+    text-decoration: none;
+    color:white;
 }
