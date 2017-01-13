@@ -6,6 +6,6 @@ body {
 #navBar {
     width:100%;
     height:75px;
-    vertical-align:middle;
+    line-height: 75px;
     background-color:aquamarine;
 }
