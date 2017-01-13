@@ -24,3 +24,7 @@ body {
     color: white;
     font-family: Helvetica;
 }
+
+a {
+    text-decoration: none;
+}
