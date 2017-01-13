@@ -4,11 +4,12 @@ body {
 }
 
 #navBar {
-    width:100%;
-    height:75px;
-    background-color:aquamarine;
+    width: 100%;
+    height: 75px;
+    background-color: aquamarine;
     
     line-height: 75px;
-    font-size:50px;
-    color:white;
+    font-size: 50px;
+    color: white;
+    font-family: Helvetica;
 }
