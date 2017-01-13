@@ -3,13 +3,24 @@ body {
     border: 0px;
 }
 
-#navBar {
+#Title {
     width: 100%;
     height: 75px;
     background-color: aquamarine;
     
     line-height: 75px;
     font-size: 50px;
+    color: white;
+    font-family: Helvetica;
+}
+
+#Title {
+    width: 100%;
+    height: 20px;
+    background-color: #58B294;
+    
+    line-height: 20px;
+    font-size: 10px;
     color: white;
     font-family: Helvetica;
 }
